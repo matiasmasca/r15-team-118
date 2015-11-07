@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_admin'
 
+gem 'gmaps4rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -53,4 +55,3 @@ group :production do
   gem 'pg' #base de datos
   gem 'rails_12factor' #algo de heroku para archivos estaticos.
 end
-
