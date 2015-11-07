@@ -45,6 +45,11 @@ group :development, :test do
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem "better_errors" #Personaliza los mensajes de error de Rails.
+  gem "binding_of_caller" #Muestra valores de variables de BetterErrors
+  gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
+
 end
 
 group :test do
