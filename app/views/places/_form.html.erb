@@ -11,23 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label' %><br>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="form-group">
+    <%= f.label :description, class: 'control-label' %><br>
+    <%= f.text_field :description, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
+  <div class="form-group">
+    <%= f.label :latitude , class: 'control-label'%><br>
+    <%= f.text_field :latitude, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
+  <div class="form-group">
+    <%= f.label :longitude, class: 'control-label' %><br>
+    <%= f.text_field :longitude, class: 'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class="actions">
+      <%= f.submit 'Agregar', class: "btn btn-primary" %>
   </div>
 <% end %>
