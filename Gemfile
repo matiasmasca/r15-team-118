@@ -36,9 +36,17 @@ gem 'rails_admin'
 group :development, :test do
   # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
+	gem 'rspec-rails', '~> 3.3.3'
+	gem 'factory_girl_rails', '~> 4.5.0'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+end
+
+group :test do
+  gem "faker", "~> 1.5.0"
+	gem "capybara", "~> 2.5.0"
+	gem "database_cleaner", "~> 1.5.1"
 end
 
 group :development do
@@ -53,4 +61,3 @@ group :production do
   gem 'pg' #base de datos
   gem 'rails_12factor' #algo de heroku para archivos estaticos.
 end
-
