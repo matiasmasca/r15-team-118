@@ -12,6 +12,12 @@ deploy:
   provider: heroku
   api_key:
     secure: X8O/SITlmkXU0szDetwsE2bJwUAaxPROQxe5S505UaXCDrdb/pb0z6S9pXHx6s7GDPaw5IWOyFEgMU8Gyf6hJNMYr6zjpiBVrWebcU+A1nj5uV6Rk4Wz6V3kPcWuUuvKCkCFIu2UoZJ+FUUjjdGm8NEmFgGfX24kUOuxR0xnBe1R3t2thSQthcO72qvWPjKtx/8Eyr5KWmRcj5vdM067tzeVwxchATLZ+EXbLdeho8wInpnftcemV2MteRDRxACQsiQtb7m6TIUxMKYcqz5MrP9X+5cL2HSW5us7XfDHA981VzylDflNrZ+2okdpy4babhM/SbH0NFFBgX2WqLeeqCwpPm61EB+Z7Yuec+IFWQpd46L4qzs+5JgIPE+Vhc8iM7yEW8HVvxUYv38Qe3mNbIJctPgZSLLBwlIymzX4je6B8X5DSYVpFnenq6VIEibBApK54rdTMiQhQ2WMR4tBIcI++pWMJjXe8h680K2AOI29MWFQ79fcvS9c0LnVBOnDhSKQ4SMPPMk8ZPLx7tgIHKDZQe5bUYEZIIXrthpGYsM9TTiF+WjIGsAk9YKyextxn/85rBRZVdSTMZK4DCvt3CuXxAZhKcdlQ0qu5+POkKZ98bQh2uoG7Y9CoByRKHqrm7osSfFYMxvD3iMtzTtHuO57sbPCSneCSZNR0TTnz0Y=
-  app: r15-team-118
+  app: safe-springs-4742
   on:
     repo: railsrumble/r15-team-118
+    all_branches: true
+  run:
+  - bundle exec rake db:migrate --trace
+  - rake db:schema:load --trace
+  - rake db:seed
+  - restart
