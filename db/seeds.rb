@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+places = [
+	{:name => ' Patio Santa Ana',:description => 'un lindo patio',:latitude => "-27.471782", :longitude => "-58.669532"},
+	{:name => ' Campus UNNE',:description => 'un lindo patio',:latitude => "-27.4653708", :longitude => "-58.793242,15z"},     
+	{:name => ' Yacare',:description => 'un lindo patio',:latitude => "-27.457030", :longitude => "-58.823898"}     
+]
+
+places.each do |place|
+   Place.create!(place)
+end
